@@ -1,22 +1,18 @@
+import React, { useState } from 'react';
+
 import './App.css'; 
+import Header from './Header.jsx'
+import './Header.css'
 
-import{RouteProvider,createBrowserRouter}
-// import { useState } from "react";
-import Home from './Home.jsx';
-
-function App = () => {
-  const route = createBrowserRouter([
-   {
-    path:"/",
-    element : <App/>,
-   },
-   {
-    path:"/Home",
-    element : <Home/>,
-   },
-]);
+import Footer from './Footer.jsx'
+import './Footer.css'
 
 
+
+
+// import Home from './Home.jsx'
+
+export const App = () => {
   const [inputCode, setInputCode] = useState("");
   const [error, setError] = useState("");
   const correctCode = "12345"; 
@@ -31,21 +27,11 @@ function App = () => {
     }
   };
   return(
+     
   
     <div >
-    <nav>
-     <h1 >Online learning platform</h1>
-     <ul>
-      
-      <li><Link to="/Home">Home</Link></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="">Admission</a></li>
-      <li><a href="">Login</a></li>
-
-     </ul>
+      <Header/>
     
-
-    </nav>
     
       <div className="wrapper">
       <center>
@@ -75,36 +61,7 @@ function App = () => {
         
 
       
-        <div className="Signup">
-         <center>
-         <form action="">
-          <h2>Register</h2>
-          <div className="inputbox">
-            <input type="text" placeholder="Username" required/>
-            <i className='bx bx-user-x' ></i>
-          </div>
-          <div className="inputbox">
-            <input type="email" placeholder="Email" required/>
-            <i class='bx bx-envelope'></i>
-          </div>
-          <div className="inputbox">
-            <input type="password" placeholder="Password  " required/>
-            <i className='bx bx-lock-alt'></i>
-          </div>
-
-          <div className="remember-forget">
-            <label><input type="checkbox"/>I agree to the Terms & Conditions</label>
-            
-
-          </div>
-          <button type="submit" className="btn">Signup</button>
-          <div className="register">
-            <p>Already  have an account?<a href=" ">Login</a></p>
-          </div>
-
-        </form>
-        </center>
-        </div>
+        
         </div>
         <div className="enrol">
           <center>
@@ -128,15 +85,7 @@ function App = () => {
         
 
 
-        <div className="three">
-            
-                <p className="two">Phone number    |   Email</p>
-              
-              
-                <p className="four">+947634568765   | <a href="">Onlinelearningwithmars@gmail.com</a></p>
-             
-     
-        </div>
+      <Footer/>  
 
    
     
