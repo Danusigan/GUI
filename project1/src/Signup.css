@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
     width: 250px;
     background-color: black;
     color: white;
@@ -8,22 +8,20 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-}
-.wrapper .Signup{
-    position: absolute;
-    translate: 400px;
+} */
+ .Signup{
     width: 250px;
     background-color: black;
     color: white;
     padding: 30px ;
     border-radius: 10px;
-    margin: 80px auto;
+    margin: 200px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 }
 
-.wrapper h1 {
+.Signup h1 {
     text-align: center;
     margin-bottom: 20px;
 }

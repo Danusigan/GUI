@@ -23,5 +23,12 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
+
+        private void passpaperenrol(object sender, RoutedEventArgs e)
+        {
+            enrolmentkey enrol = new enrolmentkey();
+            enrol.Show();
+            Close();
+        }
     }
 }

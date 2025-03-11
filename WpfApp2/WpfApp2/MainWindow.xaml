@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <!-- ✅ Grid is the ONLY child of Window -->
     <Grid>
+        <!-- ✅ Set background image inside Grid -->
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\strangerts\Desktop\bg.jpg"/>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -19,27 +26,23 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Window Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="5" >
-            <Window.Background>
-                <ImageBrush ImageSource="C:\Users\strangerts\Desktop\bg.jpg"/>
-            </Window.Background>
-        </Window>
+
+        <TextBox Name="Username1" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                 Margin="245,152,0,0" Width="200" Grid.Row="4" Grid.ColumnSpan="2" 
+                 Background="#FFE8E4E4" ToolTip="Enter Your User Name" Height="23" />
+
+        <PasswordBox Name="PasswordBox" HorizontalAlignment="Left" 
+                 VerticalAlignment="Top" Margin="245,194,0,0" Width="200" Grid.Row="4" Grid.ColumnSpan="2"/>
+
+        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" 
+                Margin="288,244,0,0" Grid.Row="4" Click="Signin"/>
+
+        <TextBlock Text="Forgot Password?" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Foreground="Blue" Margin="352,213,0,0" Grid.Row="4" Cursor="Hand" Grid.ColumnSpan="2"/>
+
+        <Button Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Foreground="Blue" Grid.Row="4" Cursor="Hand" Margin="319,271,0,0" Click="Registerpath"/>
+        <Label Content="Online Learning Platform" FontSize="20" Grid.ColumnSpan="2" Margin="256,24,144,323" Grid.Row="4" />
         <Image Source="C:\Users\strangerts\Desktop\icon.png" Margin="167,20,129,356" Grid.RowSpan="5"/>
-        <Label Content="Online Learning Platform" FontSize="20" Grid.ColumnSpan="2" Margin="256,34,144,356" Grid.Row="4" />
-
-
-        <TextBox Name="UsernameTextBox"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,152,0,0" Width="200" Grid.Row="4" Grid.ColumnSpan="2" Background="#FFE8E4E4" Text="Enter Your User Name" RenderTransformOrigin="1,1" Height="23" />
-
-
-
-        <TextBox Name="PasswordBox" Text="Enter Your Password"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,194,0,0" Width="200" Grid.Row="4" Grid.ColumnSpan="2"/>
-
-
-        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="290,248,0,0" Grid.Row="4"/>
-
-
-        <TextBlock Text="Forgot Password?" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Blue" Margin="352,213,0,0" Grid.Row="4" Cursor="Hand" Grid.ColumnSpan="2"/>
-
-        <TextBlock Text="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Blue" Grid.Row="4" Cursor="Hand"  Margin="317,271,0,0"/>
     </Grid>
 </Window>

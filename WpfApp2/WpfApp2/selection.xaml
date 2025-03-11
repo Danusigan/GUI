@@ -7,13 +7,11 @@
         mc:Ignorable="d"
         Title="selection" Height="450" Width="800">
     <Grid Margin="0,0,-26,-6">
-        <Window Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="5" >
-            <Window.Background>
+        <Border Margin="2,-8,-6,0" Grid.ColumnSpan="2">
+            <Border.Background>
                 <ImageBrush ImageSource="C:\Users\strangerts\Desktop\bg.jpg"/>
-            </Window.Background>
-        </Window>
-        <Image Source="C:\Users\strangerts\Desktop\icon.png" Margin="159,28,373,348"/>
-        <Label Content="Online Learning Platform" FontSize="20" Margin="358,46,42,344" />
+            </Border.Background>
+        </Border>
         <Image Source="C:\Users\strangerts\Desktop\passpaper.jpg" Margin="520,169,-17,144" RenderTransformOrigin="0.647,0.5"/>
         <Image Source="C:\Users\strangerts\Desktop\passpaper.jpg" Margin="266,174,263,144" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
@@ -26,9 +24,11 @@
             </Image.RenderTransform>
         </Image>
         <Image Source="C:\Users\strangerts\Desktop\passpaper.jpg" Margin="32,172,576,147"/>
-        <Label Content="Passpaper Recordings" Margin="45,298,589,42" Height="100" FontSize="18"/>
         <Label Content="Theory Recordings" Margin="604,296,38,44" Height="100" FontSize="18"/>
         <Label Content="Modelpaper Recordings" Margin="312,298,301,42" Height="100" FontSize="18"/>
+        <Button Content="Passpaper Recordings" Margin="45,298,589,116" FontSize="18" Background="#FF918E8E" Click="passpaperenrol"/>
+        <Label Content="Online Learning Platform" FontSize="20" Margin="358,46,42,344" />
+        <Image Source="C:\Users\strangerts\Desktop\icon.png" Margin="159,28,373,348"/>
 
     </Grid>
 </Window>

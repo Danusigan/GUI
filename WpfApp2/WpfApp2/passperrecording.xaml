@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp2.passperrecording"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="passperrecording" Height="450" Width="800">
+    <Grid>
+        <Border>
+
+            <Border.Background>
+                <ImageBrush ImageSource="C:\Users\strangerts\Desktop\bg.jpg"/>
+            </Border.Background>
+
+        </Border>
+        <Image Source="C:\Users\strangerts\Desktop\icon.png" Margin="64,32,232,344"/>
+        <Label Content="Online Learning Platform" FontSize="20" Margin="368,46,32,344" />
+        <Image Source="C:\Users\strangerts\Desktop\Project\2021.jpg" Margin="430,273,86,50" RenderTransformOrigin="0.647,0.5"/>
+        <Image Source="C:\Users\strangerts\Desktop\Project\2022.jpg" Margin="138,273,399,53" RenderTransformOrigin="0.647,0.5"/>
+        <Image Source="C:\Users\strangerts\Desktop\Project\2023.jpg" Margin="430,128,78,183" RenderTransformOrigin="0.647,0.5"/>
+        <Image Source="C:\Users\strangerts\Desktop\Project\2024.jpg" Margin="150,133,414,183" RenderTransformOrigin="0.647,0.5"/>
+        
+    </Grid>
+</Window>
+ 

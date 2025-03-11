@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Enrolmentkey.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="passperrecording.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="selection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,7 +24,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Enrolmentkey.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="passperrecording.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="selection.xaml">

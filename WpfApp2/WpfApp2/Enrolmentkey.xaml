@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp2.enrolmentkey"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="enrolmentkey" Height="450" Width="800">
+    <Grid Background="#2D1E2D">
+
+        <Label Content="&#xD;&#xA;&#xD;&#xA;Enter the Enrolment Key" Margin="316,118,246,217" FontSize="20" Foreground="#FFFEF7F7"/>
+        <Button Name="Submitbutton" Content="Submit" Width="100" Margin="385,280,315,124" Background="#FF0B1C40" Foreground="#FFEAE3E3" Click="Submit_Click"/>
+        <TextBox x:Name="EnrolmentKey" Margin="331,222,261,185" RenderTransformOrigin="0.527,0.78"  TextAlignment="Center" TextChanged="EnrolmentKey_TextChanged"/>
+        <Border Background="Gray" Margin="0,0,10,372">
+            <StackPanel>
+                <Label Content="Online Learning Platform" FontSize="20" Foreground="#FFF6F4F4" Width="293" />
+                <Image Source="C:\Users\strangerts\Desktop\icon.png" Height="31" Width="60" RenderTransformOrigin="-0.783,0.888"/>
+            </StackPanel>
+        </Border>
+        <Image Source="C:\Users\strangerts\Desktop\Capture.JPG" Margin="30,97,542,39"/>
+    </Grid>
+</Window>

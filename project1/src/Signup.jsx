@@ -1,35 +1,47 @@
-import React from "react"
-import './Signup.css'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './Signup.css';
 
-<div className="wrapper">
-   <div className="Signup">
-         <center>
-         <form action="">
-          <h2>Register</h2>
-          <div className="inputbox">
-            <input type="text" placeholder="Username" required/>
-            <i className='bx bx-user-x' ></i>
-          </div>
-          <div className="inputbox">
-            <input type="email" placeholder="Email" required/>
-            <i class='bx bx-envelope'></i>
-          </div>
-          <div className="inputbox">
-            <input type="password" placeholder="Password  " required/>
-            <i className='bx bx-lock-alt'></i>
-          </div>
+export const Signup = () => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-          <div className="remember-forget">
-            <label><input type="checkbox"/>I agree to the Terms & Conditions</label>
-            
+  const handleSignup = async (e) => {
+    e.preventDefault();  // Prevent default form submission
 
-          </div>
-          <button type="submit" className="btn">Signup</button>
-          <div className="register">
-            <p>Already  have an account?<a href=" ">Login</a></p>
-          </div>
+    try {
+      await axios.post('http://localhost:5000/register', { username, email, password });
+      alert('Signup successful! You can now log in.');
+      navigate('/');  // Redirect to login page
+    } catch (error) {
+      alert('Error: ' + error.response.data.error || 'Signup failed.');
+    }
+  };
 
-        </form>
-        </center>
+  return (
+    <div className="Signup">
+      <form onSubmit={handleSignup}>
+        <h2>Register</h2>
+        <div className="inputbox">
+          <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
+        </div>
+        <div className="inputbox">
+          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </div>
+        <div className="inputbox">
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </div>
+        <div className="remember-forget">
+          <label><input type="checkbox" required /> I agree to the Terms & Conditions</label>
+        </div>
+        <button type="submit" className="btn">Signup</button>
+        <div className="register">
+          <p>Already have an account? <Link to="/">Login</Link></p>
+        </div>
+      </form>
     </div>
-</div>
+  );
+};
